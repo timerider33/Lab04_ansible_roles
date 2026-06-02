@@ -1,0 +1,14 @@
+---
+- name: Deploy nginx virtual hosts
+  hosts: hosts
+  become: true
+
+  vars:
+    sites:
+      - mehmat.ru
+      - fizfak.ru
+      - etis.com
+      - fakesite.com
+
+  roles:
+    - nginx_vhosts
